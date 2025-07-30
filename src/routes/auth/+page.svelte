@@ -221,15 +221,19 @@
 								}}
 							>
 								<div class="mb-1">
+									<div class="mb-6 flex justify-center">
+									<img src="/static/saia-logo.png" alt="SAIA BaTI Logo" class="h-10" />
+									</div>
+
 									<div class=" text-2xl font-medium">
 										{#if $config?.onboarding ?? false}
 											{$i18n.t(`Get started with {{WEBUI_NAME}}`, { WEBUI_NAME: $WEBUI_NAME })}
 										{:else if mode === 'ldap'}
-											{$i18n.t(`Sign in to {{WEBUI_NAME}} with LDAP`, { WEBUI_NAME: $WEBUI_NAME })}
+											{$i18n.t(`Masuk ke  {{WEBUI_NAME}} with LDAP`, { WEBUI_NAME: $WEBUI_NAME })}
 										{:else if mode === 'signin'}
-											{$i18n.t(`Sign in to {{WEBUI_NAME}}`, { WEBUI_NAME: $WEBUI_NAME })}
+											{$i18n.t(`Masuk ke {{WEBUI_NAME}}`, { WEBUI_NAME: $WEBUI_NAME })}
 										{:else}
-											{$i18n.t(`Sign up to {{WEBUI_NAME}}`, { WEBUI_NAME: $WEBUI_NAME })}
+											{$i18n.t(`Daftar {{WEBUI_NAME}}`, { WEBUI_NAME: $WEBUI_NAME })}
 										{/if}
 									</div>
 
@@ -290,7 +294,7 @@
 													class="my-0.5 w-full text-sm outline-hidden bg-transparent"
 													autocomplete="email"
 													name="email"
-													placeholder={$i18n.t('Enter Your Email')}
+													placeholder={$i18n.t('Masukkan Email Anda')}
 													required
 												/>
 											</div>
@@ -305,7 +309,7 @@
 												type="password"
 												id="password"
 												class="my-0.5 w-full text-sm outline-hidden bg-transparent"
-												placeholder={$i18n.t('Enter Your Password')}
+												placeholder={$i18n.t('Masukkan Email Anda')}
 												autocomplete={mode === 'signup' ? 'new-password' : 'current-password'}
 												name="password"
 												required
@@ -328,7 +332,7 @@
 												type="submit"
 											>
 												{mode === 'signin'
-													? $i18n.t('Sign in')
+													? $i18n.t('Masuk')
 													: ($config?.onboarding ?? false)
 														? $i18n.t('Create Admin Account')
 														: $i18n.t('Create Account')}
@@ -351,7 +355,7 @@
 															}
 														}}
 													>
-														{mode === 'signin' ? $i18n.t('Sign up') : $i18n.t('Sign in')}
+														{mode === 'signin' ? $i18n.t('Daftar') : $i18n.t('Masuk')}
 													</button>
 												</div>
 											{/if}
@@ -359,7 +363,12 @@
 									{/if}
 								</div>
 							</form>
-
+						<div class="mt-8 text-center text-sm text-gray-500">
+  						Inisiatif <strong>AI</strong> dari  <strong> Kementerian Pekerjaan Umum</strong>.
+						</div>
+						<div class="mt-8 text-center text-sm text-gray-500">
+ 						<strong>CastaSoft @yongky</strong>.
+						</div>
 							{#if Object.keys($config?.oauth?.providers ?? {}).length > 0}
 								<div class="inline-flex items-center justify-center w-full">
 									<hr class="w-32 h-px my-4 border-0 dark:bg-gray-100/10 bg-gray-700/10" />
