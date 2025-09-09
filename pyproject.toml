@@ -59,6 +59,8 @@ dependencies = [
 
     "fake-useragent==2.2.0",
     "chromadb==1.0.20",
+    "pymilvus==2.5.0",
+    "qdrant-client==1.14.3",
     "opensearch-py==2.8.0",
     "playwright==1.49.1",
     "elasticsearch==9.1.0",
@@ -117,6 +119,12 @@ dependencies = [
     "azure-storage-blob==12.24.1",
 
     "ldap3==2.9.1",
+
+    "firecrawl-py==1.12.0",
+    "tencentcloud-sdk-python==3.0.1336",
+    
+    "oracledb>=3.2.0",
+
 ]
 readme = "README.md"
 requires-python = ">= 3.11, < 3.13.0a1"
