@@ -60,7 +60,11 @@ dependencies = [
     "fake-useragent==2.2.0",
     "chromadb==1.0.20",
     "opensearch-py==2.8.0",
-    
+    "playwright==1.49.1",
+    "elasticsearch==9.1.0",
+    "pinecone==6.0.2",
+    "oracledb==3.2.0",
+
     "transformers",
     "sentence-transformers==5.1.1",
     "accelerate",
