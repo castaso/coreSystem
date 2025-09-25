@@ -744,7 +744,7 @@
 
 				<a href="/" class="flex flex-1 px-1.5" on:click={newChatHandler}>
 					<div class=" self-center font-medium text-gray-850 dark:text-white font-primary">
-						{$WEBUI_NAME}
+						AI Irigasi
 					</div>
 				</a>
 				<Tooltip
